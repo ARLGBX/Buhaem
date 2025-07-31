@@ -91,7 +91,7 @@ section {
     padding-top: 1rem;
 }
 .square__number {
-    font-family: var(--font-family);
+    font-family: var(--font-family), sans-serif;
     font-weight: 900;
     font-size: 3rem;
     letter-spacing: 0.1em;
@@ -99,14 +99,14 @@ section {
     color: #000;
 }
 .square__content {
-    font-family: var(--font-family);
+    font-family: var(--font-family), sans-serif;
     font-weight: 700;
     font-size: 1rem;
     line-height: 132%;
     color: #000;
 }
 .square__link {
-    font-family: var(--font-family);
+    font-family: var(--font-family), sans-serif;
     font-weight: 700;
     font-size: 1rem;
     text-decoration: underline;
