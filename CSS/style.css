@@ -1,0 +1,115 @@
+:root {
+    --text-color: #222;
+    --accent: #005fa3;
+    --white: #fff;
+    --font-family: "Lato", sans-serif;
+    --second-family: "Merriweather", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--white);
+    color: var(--text-color);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+section {
+    overflow: hidden;
+}
+/*HEADER*/
+
+
+
+/*ABOUT US*/
+.about-us__content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 2rem;
+    gap:  5rem;
+}
+.about-us__block {
+    width: 400px;
+}
+.about-us__about {
+    font-family: var(--font-family), sans-serif;
+    font-weight: 900;
+    font-size: 1.5rem;
+    line-height: 138%;
+    color: #bdbdbd;
+}
+.about-us__name {
+    font-family: var(--second-family), sans-serif;
+    font-weight: 900;
+    font-size: 3rem;
+    line-height: 145%;
+    color: #333;
+}
+.about-us__name > span {
+    color: var(--accent);
+}
+.about-us__paragraph {
+    font-family: var(--font-family), sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 138%;
+    color: #000;
+}
+.about-us__square {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding:  2rem;
+    background-color: #EBEBEB;
+    width: 255px;
+    height: 255px;
+    transition: 0.5s;
+}
+.about-us__square:hover {
+    background-color: var(--accent);
+    transform: scale(1.1);
+}
+
+.about-us__square:hover .square__content,
+.about-us__square:hover .square__number,
+.about-us__square:hover .square__link {
+    color: white;
+}
+
+.about-us__line {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap:  1rem;
+    width: 500px;
+    padding-top: 1rem;
+}
+.square__number {
+    font-family: var(--font-family);
+    font-weight: 900;
+    font-size: 3rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #000;
+}
+.square__content {
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 132%;
+    color: #000;
+}
+.square__link {
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 1rem;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    color: var(--accent);
+}
