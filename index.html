@@ -8,7 +8,75 @@
 </head>
 <body>
 <header class="header">
-    <div class="container">
+    <!-- Верхняя панель с контактами -->
+    <div class="header__top">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="header__contacts d-flex justify-content-end gap-4 align-items-center flex-wrap">
+                        <div class="header__contact-item d-flex align-items-center">
+                            <span class="header__contact-icon">
+                                <!-- SVG для телефона -->
+                            </span>
+                            <span class="header__contact-text">+7 (999) 123-45-67</span>
+                        </div>
+                        <div class="header__contact-item d-flex align-items-center">
+                            <span class="header__contact-icon">
+                                <!-- SVG для времени работы -->
+                            </span>
+                            <span class="header__contact-text">Пн-Пт: 9:00-18:00</span>
+                        </div>
+                        <div class="header__contact-item d-flex align-items-center">
+                            <span class="header__contact-icon">
+                                <!-- SVG для почты -->
+                            </span>
+                            <span class="header__contact-text">info@buhaem.ru</span>
+                        </div>
+                        <div class="header__contact-item d-flex align-items-center">
+                            <span class="header__contact-icon">
+                                <!-- SVG для адреса -->
+                            </span>
+                            <span class="header__contact-text">г. Москва, ул. Примерная, д. 1</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Основная навигация -->
+    <div class="header__main">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg header__nav">
+                <div class="header__nav-logo">
+                    <a href="#" class="header__logo-link">БУХАЕМ</a>
+                </div>
+
+                <button class="navbar-toggler header__nav-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#headerNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="headerNav">
+                    <ul class="navbar-nav ms-auto header__nav-list">
+                        <li class="nav-item header__nav-item">
+                            <a class="nav-link header__nav-link" href="#home">Главная</a>
+                        </li>
+                        <li class="nav-item header__nav-item">
+                            <a class="nav-link header__nav-link" href="#services">Услуги</a>
+                        </li>
+                        <li class="nav-item header__nav-item">
+                            <a class="nav-link header__nav-link" href="#cases">Кейсы</a>
+                        </li>
+                        <li class="nav-item header__nav-item">
+                            <a class="nav-link header__nav-link" href="#about">О компании</a>
+                        </li>
+                        <li class="nav-item header__nav-item">
+                            <a class="nav-link header__nav-link" href="#contacts">Контакты</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
     </div>
 </header>
 <main class="main">
@@ -62,4 +130,3 @@
 </body>
 
 </html>
-

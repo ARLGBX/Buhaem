@@ -24,6 +24,26 @@ section {
 }
 /*HEADER*/
 
+header {
+    padding-top: 22px;
+}
+
+.header__nav-link{
+    font-family: var(--font-family),sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-color);
+}
+
+.header__contact-text{
+    font-family: var(--font-family),sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 132%;
+    color: #000;
+}
 
 
 /*ABOUT US*/
