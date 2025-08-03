@@ -30,11 +30,15 @@ header {
 
 .header__nav-link{
     font-family: var(--font-family),sans-serif;
-    font-weight: 700;
+    font-weight: 900;
     font-size: 14px;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    color: var(--text-color);
+    color: black !important;
+}
+
+.header__nav-link:hover{
+    color: var(--accent) !important;
 }
 
 .header__contact-text{
@@ -45,6 +49,10 @@ header {
     color: #000;
 }
 
+.header__contact-icon{
+    margin-right: 6px;
+    margin-top: -5px;
+}
 
 /*ABOUT US*/
 .about-us__content {
