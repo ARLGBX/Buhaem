@@ -326,3 +326,110 @@ main > section:nth-of-type(2n) {
     text-decoration-skip-ink: none;
     color: var(--accent);
 }
+
+/* Адаптивность */
+@media (max-width: 1199.98px) {
+    .our-services__card {
+        padding: 2rem 1.5rem;
+    }
+
+    .our-services__card-icon {
+        width: 70px;
+        height: 70px;
+        border-radius: 16px;
+    }
+
+    .our-services__card-icon i {
+        font-size: 1.75rem;
+    }
+
+    .our-services__card-title {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 991.98px) {
+    section {
+        padding: 6rem 0;
+    }
+
+    .our-services__title {
+        font-size: 2.5rem;
+    }
+
+    .our-services__card {
+        padding: 2rem;
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-width: 767.98px) {
+    section {
+        padding: 4rem 0;
+    }
+
+    .our-services__title {
+        font-size: 2rem;
+    }
+
+    .our-services__subtitle {
+        font-size: 1rem;
+    }
+
+    .our-services__card {
+        padding: 1.5rem;
+        text-align: center;
+    }
+
+    .our-services__card-icon {
+        margin: 0 auto 1.5rem;
+        width: 60px;
+        height: 60px;
+        border-radius: 12px;
+    }
+
+    .our-services__card-icon i {
+        font-size: 1.5rem;
+    }
+
+    .our-services__card-title {
+        font-size: 1.2rem;
+    }
+
+    .our-services__card-description {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .our-services__title {
+        font-size: 1.75rem;
+    }
+
+    .our-services__description {
+        font-size: 1rem;
+    }
+
+    .our-services__card {
+        padding: 1.25rem;
+    }
+
+    .our-services__card-icon {
+        width: 50px;
+        height: 50px;
+        border-radius: 10px;
+    }
+
+    .our-services__card-icon i {
+        font-size: 1.25rem;
+    }
+
+    .our-services__card-title {
+        font-size: 1.1rem;
+    }
+
+    .our-services__card-description {
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
+    }
+}
