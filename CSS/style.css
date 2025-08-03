@@ -20,6 +20,7 @@ body {
 
 a {
     text-decoration: none;
+    text-underline-offset: 3px;
     color: inherit;
 }
 section h2 {
@@ -95,7 +96,6 @@ main > section:nth-of-type(2n) {
 
 .our-services__card {
     background: var(--white);
-    border-radius: 16px;
     padding: 2.5rem 2rem;
     height: 100%;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
@@ -242,10 +242,7 @@ main > section:nth-of-type(2n) {
 /*ABOUT US*/
 .about-us__content {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    padding: 2rem;
-    gap:  5rem;
+    justify-content: space-between;
 }
 .about-us__block {
     width: 400px;
@@ -288,6 +285,9 @@ main > section:nth-of-type(2n) {
     background-color: var(--accent);
     transform: scale(1.1);
 }
+.about-us__square:hover .square__link {
+    text-decoration: underline;
+}
 
 .about-us__square:hover .square__content,
 .about-us__square:hover .square__number,
@@ -322,7 +322,6 @@ main > section:nth-of-type(2n) {
     font-family: var(--font-family), sans-serif;
     font-weight: 700;
     font-size: 1rem;
-    text-decoration: underline;
     text-decoration-skip-ink: none;
     color: var(--accent);
 }
