@@ -22,6 +22,10 @@ a {
 section {
     overflow: hidden;
 }
+
+.container {
+    position: relative;
+}
 /*HEADER*/
 
 header {
@@ -82,7 +86,6 @@ header {
 }
 
 .slider__content {
-    text-align: center;
     color: white;
     max-width: 800px;
     position: relative;
@@ -100,10 +103,11 @@ header {
 }
 
 .slider__title {
-    font-size: 3rem;
-    font-weight: bold;
-    margin-bottom: 1.5rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    font-family: var(--second-family),sans-serif;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 138%;
+    color: var(--white);
 }
 
 .slider__text {
@@ -115,12 +119,17 @@ header {
 
 .slider__btn {
     display: inline-block;
-    background: #005FA3;
-    color: white;
-    padding: 15px 30px;
+    background: var(--accent);
+    width: 270px;
+    height: 60px;
+    text-align: center;
+    padding: 15px 0 0 0;
     text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
+    font-family: var(--font-family), sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 138%;
+    color: var(--white);
     transition: background 0.3s ease;
 }
 
@@ -131,7 +140,7 @@ header {
 
 .slider__navigation {
     position: absolute;
-    bottom: 30px;
+    bottom: -200px;
     left: 0;
     right: 0;
     display: flex;
@@ -162,6 +171,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
+    border: none;
 }
 
 .slider__nav-btn:hover {

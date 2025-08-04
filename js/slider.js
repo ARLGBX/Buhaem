@@ -33,6 +33,5 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Автопрокрутка каждые 5 секунд
-    setInterval(nextSlide, 5000);
+    // setInterval(nextSlide, 5000);
 });
