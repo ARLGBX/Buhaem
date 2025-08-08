@@ -102,6 +102,52 @@ class BrandsSlider {
     }
 }
 
+class ReviewsSlider {
+    constructor() {
+        this.currentSlide = 0;
+        this.slides = document.querySelectorAll('.reviews-slider__item');
+        this.dots = document.querySelectorAll('.reviews-slider__dot');
+        this.prevBtn = document.querySelector('.reviews-slider__prev');
+        this.nextBtn = document.querySelector('.reviews-slider__next');
+
+        this.init();
+    }
+
+    init() {
+        this.prevBtn?.addEventListener('click', () => this.prevSlide());
+        this.nextBtn?.addEventListener('click', () => this.nextSlide());
+
+        this.dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => this.goToSlide(index));
+        });
+    }
+
+    showSlide(index) {
+        this.slides.forEach(slide => slide.classList.remove('active'));
+        this.dots.forEach(dot => dot.classList.remove('active'));
+
+        this.slides[index]?.classList.add('active');
+        this.dots[index]?.classList.add('active');
+
+        this.currentSlide = index;
+    }
+
+    nextSlide() {
+        const nextIndex = (this.currentSlide + 1) % this.slides.length;
+        this.showSlide(nextIndex);
+    }
+
+    prevSlide() {
+        const prevIndex = this.currentSlide === 0 ? this.slides.length - 1 : this.currentSlide - 1;
+        this.showSlide(prevIndex);
+    }
+
+    goToSlide(index) {
+        this.showSlide(index);
+    }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     new BrandsSlider();
+    new ReviewsSlider();
 });
