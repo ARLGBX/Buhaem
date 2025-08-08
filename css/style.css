@@ -714,6 +714,153 @@ header {
     width: 100%;
 }
 
+/*OUR CLIENTS*/
+
+.our-clients {
+    padding: 80px 0;
+}
+
+.brands-slider__content {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
+
+.brands-slider__item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.brands-slider__item.active {
+    opacity: 1;
+}
+
+.brands-slider__brands {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    align-items: center;
+    height: 100%;
+}
+
+.brand-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 120px;
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+.brand-logo:hover {
+    transform: scale(1.05);
+}
+
+.brand-logo img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+}
+
+.brand-logo:hover img {
+    filter: grayscale(0%);
+}
+
+.brands-slider__navigation {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 50px;
+    margin-top: 50px;
+}
+
+.brands-slider__dots {
+    display: flex;
+    gap: 15px;
+}
+
+.brands-slider__dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--accent);
+    opacity: 0.4;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.brands-slider__dot.active {
+    background: var(--accent);
+    opacity: 1;
+}
+
+.brands-slider__description{
+    font-family: var(--font-family), sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 138%;
+    color: #bdbdbd;
+}
+
+.brands-slider__title{
+    font-family: var(--second-family), serif;
+    font-weight: 900;
+    font-size: 48px;
+    line-height: 145%;
+    color: #333;
+}
+
+.brands-slider__nav-buttons {
+    display: flex;
+}
+
+.brands-slider__nav-btn {
+    background: var(--accent);
+    opacity: 0.3;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+}
+
+.brands-slider__nav-btn:hover {
+    opacity: 0.8;
+}
+
+.brands-slider__nav-btn svg {
+    fill: white;
+    width: 15px;
+    height: 15px;
+    pointer-events: none;
+}
+
+@media (max-width: 768px) {
+    .brands-slider__brands {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .brands-slider__navigation {
+        padding: 0 20px;
+    }
+}
+
 /* Адаптивность */
 @media (max-width: 1199.98px) {
     .our-services__card {
@@ -995,3 +1142,5 @@ header {
         font-size: 14px;
     }
 }
+
+
