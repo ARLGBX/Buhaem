@@ -716,8 +716,7 @@ header {
 }
 
 /*OUR CLIENTS*/
-
-.our-clients {
+.our-partners {
     padding: 80px 0;
 }
 
@@ -851,15 +850,264 @@ header {
     pointer-events: none;
 }
 
-@media (max-width: 768px) {
-    .brands-slider__brands {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-    }
 
-    .brands-slider__navigation {
-        padding: 0 20px;
-    }
+/* Reviews */
+.reviews {
+    position: relative;
+    overflow: hidden;
+}
+
+.reviews::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 300px;
+    height: 300px;
+    background: linear-gradient(135deg, rgba(0, 95, 163, 0.03) 0%, rgba(0, 95, 163, 0.08) 100%);
+    transform: rotate(45deg) translate(-50%, 50%);
+    pointer-events: none;
+}
+
+.reviews__header {
+    position: relative;
+    z-index: 2;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.reviews__title {
+    font-family: var(--second-family), serif;
+    font-weight: 700;
+    font-size: 3rem;
+    color: var(--text-color);
+    margin-bottom: 0;
+}
+
+.reviews__description {
+    font-family: var(--font-family), sans-serif;
+    font-weight: 600;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.reviews__subtitle {
+    font-family: var(--font-family), sans-serif;
+    font-size: 1.1rem;
+    color: var(--text-color-gray);
+    line-height: 1.6;
+}
+
+.reviews__content {
+    position: relative;
+    z-index: 2;
+}
+
+.reviews__card {
+    background: var(--white);
+    padding: 2rem;
+    height: 100%;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    border: 1px solid rgba(0, 95, 163, 0.1);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.reviews__card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--accent) 0%, #007bb8 100%);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease;
+}
+
+.reviews__card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 40px rgba(0, 95, 163, 0.15);
+    border-color: var(--accent);
+}
+
+.reviews__card:hover::before {
+    transform: scaleX(1);
+}
+
+.reviews__card-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.reviews__card-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+    overflow: hidden;
+    flex-shrink: 0;
+    position: relative;
+    border: 2px solid var(--bg-color);
+    transition: border-color 0.3s ease;
+}
+
+.reviews__card:hover .reviews__card-avatar {
+    border-color: var(--accent);
+}
+
+.reviews__card-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.reviews__card-info {
+    flex: 1;
+}
+
+.reviews__card-name {
+    font-family: var(--second-family), serif;
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: var(--text-color);
+    margin-bottom: 0.25rem;
+    transition: color 0.3s ease;
+}
+
+.reviews__card:hover .reviews__card-name {
+    color: var(--accent);
+}
+
+.reviews__card-company {
+    font-family: var(--font-family), sans-serif;
+    font-size: 0.9rem;
+    color: var(--text-color-gray);
+    margin-bottom: 0.5rem;
+}
+
+.reviews__card-rating {
+    display: flex;
+    gap: 0.25rem;
+}
+
+.reviews__card-rating i {
+    color: #ffc107;
+    font-size: 0.9rem;
+}
+
+.reviews__card-content {
+    flex: 1;
+    margin-bottom: 1.5rem;
+}
+
+.reviews__card-text {
+    font-family: var(--font-family), sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--text-color);
+    margin-bottom: 0;
+    font-style: italic;
+    position: relative;
+}
+
+.reviews__card-text::before {
+    content: '"';
+    font-family: var(--second-family), serif;
+    font-size: 4rem;
+    color: rgba(0, 95, 163, 0.1);
+    position: absolute;
+    top: -15px;
+    left: -10px;
+    line-height: 1;
+    z-index: -1;
+}
+
+.reviews__card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1rem;
+    border-top: 1px solid var(--bg-color);
+}
+
+.reviews__card-date {
+    font-family: var(--font-family), sans-serif;
+    font-size: 0.85rem;
+    color: var(--text-color-gray);
+}
+
+.reviews__card-verified {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--font-family), sans-serif;
+    font-size: 0.8rem;
+    color: var(--accent);
+}
+
+.reviews__card-verified i {
+    font-size: 0.9rem;
+}
+
+.reviews__footer {
+    position: relative;
+    z-index: 2;
+}
+
+.reviews__stats {
+    background: var(--white);
+    padding: 2rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(0, 95, 163, 0.1);
+    margin-bottom: 2rem;
+}
+
+.reviews__stat {
+    text-align: center;
+}
+
+.reviews__stat-number {
+    font-family: var(--second-family), serif;
+    font-weight: 900;
+    font-size: 2.5rem;
+    color: var(--accent);
+    margin-bottom: 0.5rem;
+}
+
+.reviews__stat-label {
+    font-family: var(--font-family), sans-serif;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--text-color-gray);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.reviews__btn {
+    font-family: var(--font-family), sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 0.75rem 2rem;
+    border: 2px solid var(--accent);
+    color: var(--accent);
+    background: transparent;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.reviews__btn:hover {
+    background: var(--accent);
+    color: var(--white);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 95, 163, 0.2);
 }
 
 /* Адаптивность */
@@ -890,6 +1138,26 @@ header {
         min-height: 180px;
     }
     .square__number {
+        font-size: 2.2rem;
+    }
+
+    .reviews__title {
+        font-size: 2.5rem;
+    }
+    .reviews__card {
+        padding: 1.75rem;
+    }
+    .reviews__card-avatar {
+        width: 55px;
+        height: 55px;
+    }
+    .reviews__card-name {
+        font-size: 1.1rem;
+    }
+    .reviews__stats {
+        padding: 1.5rem;
+    }
+    .reviews__stat-number {
         font-size: 2.2rem;
     }
 }
@@ -931,6 +1199,23 @@ header {
     }
     .about-us__stats-grid {
         margin: 0 auto;
+    }
+
+    .reviews__title {
+        font-size: 2.2rem;
+    }
+    .reviews__card {
+        padding: 1.5rem;
+        margin-bottom: 1rem;
+    }
+    .reviews__card-header {
+        margin-bottom: 1rem;
+    }
+    .reviews__card-content {
+        margin-bottom: 1rem;
+    }
+    .reviews__stats {
+        padding: 1.5rem 1rem;
     }
 }
 
@@ -997,8 +1282,62 @@ header {
     .square__link {
         font-size: 0.85rem;
     }
+
     .brands-slider__content{
         height: 300px;
+    }
+    .brands-slider__brands {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    .brands-slider__navigation {
+        padding: 0 20px;
+    }
+
+    .reviews__title {
+        font-size: 2rem;
+    }
+    .reviews__subtitle {
+        font-size: 1rem;
+    }
+    .reviews__card {
+        padding: 1.25rem;
+        text-align: left;
+    }
+    .reviews__card-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+    .reviews__card-avatar {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        margin: 0 auto;
+    }
+    .reviews__card-info {
+        text-align: center;
+    }
+    .reviews__card-name {
+        font-size: 1.1rem;
+    }
+    .reviews__card-text {
+        font-size: 0.95rem;
+        text-align: center;
+    }
+    .reviews__card-footer {
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+    }
+    .reviews__stats {
+        padding: 1rem;
+    }
+    .reviews__stat-number {
+        font-size: 2rem;
+    }
+    .reviews__stat-label {
+        font-size: 0.8rem;
     }
 }
 
@@ -1052,6 +1391,47 @@ header {
     .about-us__feature {
         justify-content: center;
         font-size: 0.9rem;
+    }
+
+    .reviews__title {
+        font-size: 1.75rem;
+    }
+    .reviews__description {
+        font-size: 1rem;
+    }
+    .reviews__card {
+        padding: 1rem;
+    }
+    .reviews__card-avatar {
+        width: 60px;
+        height: 60px;
+    }
+    .reviews__card-name {
+        font-size: 1rem;
+    }
+    .reviews__card-text {
+        font-size: 0.9rem;
+    }
+    .reviews__card-text::before {
+        font-size: 3rem;
+        top: -10px;
+        left: -5px;
+    }
+    .reviews__card-company {
+        font-size: 0.85rem;
+    }
+    .reviews__card-verified {
+        font-size: 0.75rem;
+    }
+    .reviews__stat-number {
+        font-size: 1.75rem;
+    }
+    .reviews__stat-label {
+        font-size: 0.75rem;
+    }
+    .reviews__btn {
+        font-size: 0.9rem;
+        padding: 0.6rem 1.5rem;
     }
 }
 
@@ -1146,5 +1526,3 @@ header {
         font-size: 14px;
     }
 }
-
-

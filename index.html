@@ -21,7 +21,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <!-- Коллапсируемое содержимое -->
+            <!-- Складывающееся содержимое -->
             <div class="collapse navbar-collapse" id="navbarContent">
                 <!-- Навигационное меню -->
                 <ul class="navbar-nav ms-auto">
@@ -29,13 +29,13 @@
                         <a class="nav-link header__nav-link" href="#home">Главная</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link header__nav-link" href="#about">О компании</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link header__nav-link" href="#services">Услуги</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link header__nav-link" href="#cases">Кейсы</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link header__nav-link" href="#about">О компании</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link header__nav-link" href="#contacts">Контакты</a>
@@ -92,24 +92,19 @@
             <div class="container">
                 <div class="slider__content">
                     <div class="slider__item active">
-                        <h1 class="slider__title">Заголовок первого слайда</h1>
-                        <p class="slider__text">Описание первого слайда с текстом о ваших услугах</p>
-                        <a href="#services" class="slider__btn">Наши услуги</a>
-                    </div>
-                    <div class="slider__item">
                         <h1 class="slider__title">Заголовок второго слайда</h1>
                         <p class="slider__text">Описание второго слайда с информацией о компании</p>
                         <a href="#about" class="slider__btn">О компании</a>
                     </div>
                     <div class="slider__item">
+                        <h1 class="slider__title">Заголовок первого слайда</h1>
+                        <p class="slider__text">Описание первого слайда с текстом о ваших услугах</p>
+                        <a href="#services" class="slider__btn">Наши услуги</a>
+                    </div>
+                    <div class="slider__item">
                         <h1 class="slider__title">Заголовок третьего слайда</h1>
                         <p class="slider__text">Описание третьего слайда с призывом к действию</p>
                         <a href="#contacts" class="slider__btn">Связаться</a>
-                    </div>
-                    <div class="slider__item">
-                        <h1 class="slider__title">Заголовок четвертого слайда</h1>
-                        <p class="slider__text">Описание четвертого слайда с призывом к действию</p>
-                        <a href="#contacts" class="slider__btn">Сделай</a>
                     </div>
                 </div>
                 <div class="slider__navigation">
@@ -117,7 +112,6 @@
                         <span class="slider__dot active" data-slide="0"></span>
                         <span class="slider__dot" data-slide="1"></span>
                         <span class="slider__dot" data-slide="2"></span>
-                        <span class="slider__dot" data-slide="3"></span>
                     </div>
                     <div class="slider__nav-buttons">
                         <button class="slider__nav-btn slider__prev">
@@ -136,7 +130,71 @@
         </div>
     </section>
 
-    <section class="our-services">
+    <section class="about-us" id="about">
+        <div class="container">
+            <div class="about-us__content">
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-6">
+                        <div class="about-us__text-block">
+                            <h3 class="about-us__about">О нас</h3>
+                            <h2 class="about-us__name">
+                                Компания <br>
+                                <span>Название компании</span>
+                            </h2>
+                            <p class="about-us__paragraph">
+                                Мы - команда профессионалов с многолетним опытом в сфере бухгалтерского учета и налогового консультирования. Наша компания предоставляет полный спектр услуг для малого и среднего бизнеса, помогая клиентам сосредоточиться на развитии своего дела.
+                            </p>
+                            <p class="about-us__paragraph">
+                                Индивидуальный подход к каждому клиенту, высокая квалификация специалистов и использование современных технологий позволяют нам гарантировать качественное ведение учета и своевременную сдачу отчетности.
+                            </p>
+                            <div class="about-us__features">
+                                <div class="about-us__feature">
+                                    <i class="fas fa-check"></i>
+                                    <span>Опыт более 10 лет</span>
+                                </div>
+                                <div class="about-us__feature">
+                                    <i class="fas fa-check"></i>
+                                    <span>Сертифицированные специалисты</span>
+                                </div>
+                                <div class="about-us__feature">
+                                    <i class="fas fa-check"></i>
+                                    <span>Индивидуальный подход</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="about-us__stats-block">
+                            <div class="about-us__stats-grid">
+                                <div class="about-us__square">
+                                    <h2 class="square__number">150+</h2>
+                                    <h3 class="square__content">Довольных клиентов</h3>
+                                    <a class="square__link" href="#">Отзывы</a>
+                                </div>
+                                <div class="about-us__square">
+                                    <h2 class="square__number">500+</h2>
+                                    <h3 class="square__content">Завершенных проектов</h3>
+                                    <a class="square__link" href="#">Портфолио</a>
+                                </div>
+                                <div class="about-us__square">
+                                    <h2 class="square__number">10+</h2>
+                                    <h3 class="square__content">Лет на рынке</h3>
+                                    <a class="square__link" href="#">О компании</a>
+                                </div>
+                                <div class="about-us__square">
+                                    <h2 class="square__number">24/7</h2>
+                                    <h3 class="square__content">Поддержка клиентов</h3>
+                                    <a class="square__link" href="#">Контакты</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="our-services" id="services">
         <div class="container">
             <div class="our-services__header text-center mb-5">
                 <h3 class="our-services__description secondary-color mb-3">Наши услуги</h3>
@@ -226,74 +284,12 @@
             </div>
         </div>
     </section>
-<section class="about-us" id="about-us">
-    <div class="container">
-        <div class="about-us__content">
-            <div class="row align-items-center g-5">
-                <div class="col-lg-6">
-                    <div class="about-us__text-block">
-                        <h3 class="about-us__about">О нас</h3>
-                        <h2 class="about-us__name">
-                            Компания <br>
-                            <span>Бухаем</span>
-                        </h2>
-                        <p class="about-us__paragraph">
-                            Мы - команда профессионалов с многолетним опытом в сфере бухгалтерского учета и налогового консультирования. Наша компания предоставляет полный спектр услуг для малого и среднего бизнеса, помогая клиентам сосредоточиться на развитии своего дела.
-                        </p>
-                        <p class="about-us__paragraph">
-                            Индивидуальный подход к каждому клиенту, высокая квалификация специалистов и использование современных технологий позволяют нам гарантировать качественное ведение учета и своевременную сдачу отчетности.
-                        </p>
-                        <div class="about-us__features">
-                            <div class="about-us__feature">
-                                <i class="fas fa-check"></i>
-                                <span>Опыт более 10 лет</span>
-                            </div>
-                            <div class="about-us__feature">
-                                <i class="fas fa-check"></i>
-                                <span>Сертифицированные специалисты</span>
-                            </div>
-                            <div class="about-us__feature">
-                                <i class="fas fa-check"></i>
-                                <span>Индивидуальный подход</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="about-us__stats-block">
-                        <div class="about-us__stats-grid">
-                            <div class="about-us__square">
-                                <h2 class="square__number">150+</h2>
-                                <h3 class="square__content">Довольных клиентов</h3>
-                                <a class="square__link" href="#">Отзывы</a>
-                            </div>
-                            <div class="about-us__square">
-                                <h2 class="square__number">500+</h2>
-                                <h3 class="square__content">Завершенных проектов</h3>
-                                <a class="square__link" href="#">Портфолио</a>
-                            </div>
-                            <div class="about-us__square">
-                                <h2 class="square__number">10+</h2>
-                                <h3 class="square__content">Лет на рынке</h3>
-                                <a class="square__link" href="#">О компании</a>
-                            </div>
-                            <div class="about-us__square">
-                                <h2 class="square__number">24/7</h2>
-                                <h3 class="square__content">Поддержка клиентов</h3>
-                                <a class="square__link" href="#">Контакты</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-    <section class="our-clients">
+
+    <section class="our-partners" id="partners">
         <div class="container">
             <div class="brands-slider__header mb-5">
                 <h3 class="brands-slider__description  mb-3">Наши клиенты</h3>
-                <h2 class="brands-slider__title">C нами работают</h2>
+                <h2 class="brands-slider__title">С нами работают</h2>
             </div>
 
             <div class="brands-slider__content">
@@ -366,6 +362,238 @@
                             <path d="M10.436 7.50039L3.66175 14.2746C3.49515 14.4412 3.49515 14.7084 3.66175 14.875C3.82836 15.0417 4.09555 15.0417 4.26216 14.875L11.3382 7.79903C11.5048 7.63242 11.5048 7.36522 11.3382 7.19862L4.26216 0.125741C4.18043 0.0440098 4.0704 6.46293e-07 3.96352 6.55637e-07C3.85665 6.6498e-07 3.74662 0.0408666 3.66489 0.125741C3.49829 0.292346 3.49829 0.559543 3.66489 0.726148L10.436 7.50039Z" fill="white" />
                         </svg>
                     </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!--  Reviews  -->
+    <section class="reviews" id="reviews">
+        <div class="container">
+            <div class="reviews__header text-center mb-5">
+                <h3 class="reviews__description secondary-color mb-3">Отзывы клиентов</h3>
+                <h2 class="reviews__title">Что говорят о нас</h2>
+                <p class="reviews__subtitle mt-3">Мнения наших довольных клиентов о качестве предоставляемых услуг</p>
+            </div>
+
+            <div class="reviews__content">
+                <div class="row g-4">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="reviews__card">
+                            <div class="reviews__card-header">
+                                <div class="reviews__card-avatar">
+                                    <img src="images/avatar1.jpg" alt="Иван Петров">
+                                </div>
+                                <div class="reviews__card-info">
+                                    <h4 class="reviews__card-name">Иван Петров</h4>
+                                    <p class="reviews__card-company">ООО "Строй Инвест"</p>
+                                    <div class="reviews__card-rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="reviews__card-content">
+                                <p class="reviews__card-text">"Сотрудничаем уже более 3 лет. Профессиональный подход к каждому вопросу, всегда на связи. Особенно ценим оперативность и качество предоставляемых услуг."</p>
+                            </div>
+                            <div class="reviews__card-footer">
+                                <span class="reviews__card-date">Декабрь 2023</span>
+                                <div class="reviews__card-verified">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Проверенный отзыв</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="reviews__card">
+                            <div class="reviews__card-header">
+                                <div class="reviews__card-avatar">
+                                    <img src="images/avatar2.jpg" alt="Мария Сидорова">
+                                </div>
+                                <div class="reviews__card-info">
+                                    <h4 class="reviews__card-name">Мария Сидорова</h4>
+                                    <p class="reviews__card-company">ИП Сидорова М. А.</p>
+                                    <div class="reviews__card-rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="reviews__card-content">
+                                <p class="reviews__card-text">"Отличная компания! Помогли с регистрацией ИП и ведут учет. Всё четко, без задержек. Рекомендую всем начинающим предпринимателям."</p>
+                            </div>
+                            <div class="reviews__card-footer">
+                                <span class="reviews__card-date">Ноябрь 2023</span>
+                                <div class="reviews__card-verified">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Проверенный отзыв</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="reviews__card">
+                            <div class="reviews__card-header">
+                                <div class="reviews__card-avatar">
+                                    <img src="images/avatar3.jpg" alt="Алексей Воронов">
+                                </div>
+                                <div class="reviews__card-info">
+                                    <h4 class="reviews__card-name">Алексей Воронов</h4>
+                                    <p class="reviews__card-company">ООО "Техносервис"</p>
+                                    <div class="reviews__card-rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="reviews__card-content">
+                                <p class="reviews__card-text">"Благодарим за профессиональную работу! Особенно хочется отметить грамотность специалистов и индивидуальный подход к нашим потребностям."</p>
+                            </div>
+                            <div class="reviews__card-footer">
+                                <span class="reviews__card-date">Октябрь 2023</span>
+                                <div class="reviews__card-verified">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Проверенный отзыв</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="reviews__card">
+                            <div class="reviews__card-header">
+                                <div class="reviews__card-avatar">
+                                    <img src="images/avatar4.jpg" alt="Елена Кузнецова">
+                                </div>
+                                <div class="reviews__card-info">
+                                    <h4 class="reviews__card-name">Елена Кузнецова</h4>
+                                    <p class="reviews__card-company">ООО "Альфа Групп"</p>
+                                    <div class="reviews__card-rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="reviews__card-content">
+                                <p class="reviews__card-text">"Очень довольны сотрудничеством. Все отчеты сдаются вовремя, консультации по любым вопросам. Цены адекватные, качество на высоте."</p>
+                            </div>
+                            <div class="reviews__card-footer">
+                                <span class="reviews__card-date">Сентябрь 2023</span>
+                                <div class="reviews__card-verified">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Проверенный отзыв</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="reviews__card">
+                            <div class="reviews__card-header">
+                                <div class="reviews__card-avatar">
+                                    <img src="images/avatar5.jpg" alt="Дмитрий Орлов">
+                                </div>
+                                <div class="reviews__card-info">
+                                    <h4 class="reviews__card-name">Дмитрий Орлов</h4>
+                                    <p class="reviews__card-company">ИП Орлов Д. В.</p>
+                                    <div class="reviews__card-rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="reviews__card-content">
+                                <p class="reviews__card-text">"Надежные партнеры в ведении бизнеса. Помогли оптимизировать налоги, что существенно сэкономило бюджет. Всегда идут навстречу клиенту."</p>
+                            </div>
+                            <div class="reviews__card-footer">
+                                <span class="reviews__card-date">Август 2023</span>
+                                <div class="reviews__card-verified">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Проверенный отзыв</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="reviews__card">
+                            <div class="reviews__card-header">
+                                <div class="reviews__card-avatar">
+                                    <img src="images/avatar6.jpg" alt="Анна Морозова">
+                                </div>
+                                <div class="reviews__card-info">
+                                    <h4 class="reviews__card-name">Анна Морозова</h4>
+                                    <p class="reviews__card-company">ООО "Мир Красоты"</p>
+                                    <div class="reviews__card-rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="reviews__card-content">
+                                <p class="reviews__card-text">"Замечательная команда профессионалов! Ведут наш учет уже 2 года. Никаких проблем с отчетностью, все документы в порядке. Спасибо!"</p>
+                            </div>
+                            <div class="reviews__card-footer">
+                                <span class="reviews__card-date">Июль 2023</span>
+                                <div class="reviews__card-verified">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Проверенный отзыв</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="reviews__footer text-center mt-5">
+                <div class="reviews__stats">
+                    <div class="row g-4">
+                        <div class="col-6 col-md-3">
+                            <div class="reviews__stat">
+                                <div class="reviews__stat-number">4.9</div>
+                                <div class="reviews__stat-label">Средняя оценка</div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <div class="reviews__stat">
+                                <div class="reviews__stat-number">150+</div>
+                                <div class="reviews__stat-label">Отзывов</div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <div class="reviews__stat">
+                                <div class="reviews__stat-number">98%</div>
+                                <div class="reviews__stat-label">Рекомендуют</div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <div class="reviews__stat">
+                                <div class="reviews__stat-number">5 лет</div>
+                                <div class="reviews__stat-label">Средний срок сотрудничества</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
