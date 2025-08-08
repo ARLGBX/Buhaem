@@ -33,5 +33,5 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // setInterval(nextSlide, 5000);
+    setInterval(nextSlide, 5000);
 });
