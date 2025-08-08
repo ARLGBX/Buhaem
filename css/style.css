@@ -997,6 +997,9 @@ header {
     .square__link {
         font-size: 0.85rem;
     }
+    .brands-slider__content{
+        height: 300px;
+    }
 }
 
 @media (max-width: 575.98px) {
