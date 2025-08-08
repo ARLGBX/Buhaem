@@ -1140,6 +1140,26 @@ header {
     .square__number {
         font-size: 2.2rem;
     }
+
+    .reviews__title {
+        font-size: 2.5rem;
+    }
+    .reviews__card {
+        padding: 1.75rem;
+    }
+    .reviews__card-avatar {
+        width: 55px;
+        height: 55px;
+    }
+    .reviews__card-name {
+        font-size: 1.1rem;
+    }
+    .reviews__stats {
+        padding: 1.5rem;
+    }
+    .reviews__stat-number {
+        font-size: 2.2rem;
+    }
 }
 
 @media (max-width: 991.98px) {
@@ -1179,6 +1199,23 @@ header {
     }
     .about-us__stats-grid {
         margin: 0 auto;
+    }
+
+    .reviews__title {
+        font-size: 2.2rem;
+    }
+    .reviews__card {
+        padding: 1.5rem;
+        margin-bottom: 1rem;
+    }
+    .reviews__card-header {
+        margin-bottom: 1rem;
+    }
+    .reviews__card-content {
+        margin-bottom: 1rem;
+    }
+    .reviews__stats {
+        padding: 1.5rem 1rem;
     }
 }
 
@@ -1245,8 +1282,62 @@ header {
     .square__link {
         font-size: 0.85rem;
     }
+
     .brands-slider__content{
         height: 300px;
+    }
+    .brands-slider__brands {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    .brands-slider__navigation {
+        padding: 0 20px;
+    }
+
+    .reviews__title {
+        font-size: 2rem;
+    }
+    .reviews__subtitle {
+        font-size: 1rem;
+    }
+    .reviews__card {
+        padding: 1.25rem;
+        text-align: left;
+    }
+    .reviews__card-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+    .reviews__card-avatar {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        margin: 0 auto;
+    }
+    .reviews__card-info {
+        text-align: center;
+    }
+    .reviews__card-name {
+        font-size: 1.1rem;
+    }
+    .reviews__card-text {
+        font-size: 0.95rem;
+        text-align: center;
+    }
+    .reviews__card-footer {
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+    }
+    .reviews__stats {
+        padding: 1rem;
+    }
+    .reviews__stat-number {
+        font-size: 2rem;
+    }
+    .reviews__stat-label {
+        font-size: 0.8rem;
     }
 }
 
@@ -1300,6 +1391,47 @@ header {
     .about-us__feature {
         justify-content: center;
         font-size: 0.9rem;
+    }
+
+    .reviews__title {
+        font-size: 1.75rem;
+    }
+    .reviews__description {
+        font-size: 1rem;
+    }
+    .reviews__card {
+        padding: 1rem;
+    }
+    .reviews__card-avatar {
+        width: 60px;
+        height: 60px;
+    }
+    .reviews__card-name {
+        font-size: 1rem;
+    }
+    .reviews__card-text {
+        font-size: 0.9rem;
+    }
+    .reviews__card-text::before {
+        font-size: 3rem;
+        top: -10px;
+        left: -5px;
+    }
+    .reviews__card-company {
+        font-size: 0.85rem;
+    }
+    .reviews__card-verified {
+        font-size: 0.75rem;
+    }
+    .reviews__stat-number {
+        font-size: 1.75rem;
+    }
+    .reviews__stat-label {
+        font-size: 0.75rem;
+    }
+    .reviews__btn {
+        font-size: 0.9rem;
+        padding: 0.6rem 1.5rem;
     }
 }
 
