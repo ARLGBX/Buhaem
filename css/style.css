@@ -52,15 +52,16 @@ header {
 
 .header__nav-link{
     font-family: var(--font-family),sans-serif;
-    font-weight: 900;
+    font-weight: 500;
     font-size: 14px;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    color: black !important;
+    color: var(--text-color)
 }
 
 .header__nav-link:hover{
     color: var(--accent) !important;
+    text-shadow: 0 10px 30px rgba(0, 95, 163, 0.2);
 }
 
 .header__contact-text{
@@ -76,6 +77,7 @@ header {
     margin-top: -5px;
 }
 
+
 /*SLIDER*/
 
 .slider {
@@ -90,6 +92,7 @@ header {
     align-items: center;
     justify-content: center;
 }
+
 
 .slider__overlay {
     position: absolute;
@@ -148,12 +151,17 @@ header {
     font-size: 18px;
     line-height: 138%;
     color: var(--white);
-    transition: background 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+
+
 }
 
 .slider__btn:hover {
-    background: #004080;
     color: white;
+    background-color: var(--accent);
+    border-color: var(--accent);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 95, 163, 0.2);
 }
 
 .slider__navigation {
@@ -184,7 +192,8 @@ header {
 }
 
 .slider__nav-btn {
-    background: black;
+    position: relative;
+    background: white;
     opacity: 0.4;
     width: 60px;
     height: 60px;
@@ -196,8 +205,9 @@ header {
     border: none;
 }
 
+/*СУКА ЧЕ С ЭТОЙ ХУЙНЕЙ (свг не видна в кнопке сука из-за того что она тоже становится прозрачной)*/
 .slider__nav-btn:hover svg {
-    opacity: 1; /* SVG остается непрозрачным при ховере */
+    opacity: 1;
 }
 
 .slider__nav-btn:hover {

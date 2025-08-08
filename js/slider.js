@@ -1,16 +1,20 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // Инициализация слайдера
     const slides = document.querySelectorAll('.slider__item');
     const dots = document.querySelectorAll('.slider__dot');
     const prevBtn = document.querySelector('.slider__prev');
     const nextBtn = document.querySelector('.slider__next');
+
     let currentSlide = 0;
 
     function showSlide(index) {
-        slides.forEach(slide => slide.classList.remove('active'));
-        dots.forEach(dot => dot.classList.remove('active'));
+        slides.forEach((slide, i) => {
+            slide.classList.toggle('active', i === index);
+        });
 
-        slides[index].classList.add('active');
-        dots[index].classList.add('active');
+        dots.forEach((dot, i) => {
+            dot.classList.toggle('active', i === index);
+        });
     }
 
     function nextSlide() {
@@ -23,8 +27,9 @@ document.addEventListener('DOMContentLoaded', function() {
         showSlide(currentSlide);
     }
 
-    nextBtn.addEventListener('click', nextSlide);
-    prevBtn.addEventListener('click', prevSlide);
+    // Обработчики событий
+    if (nextBtn) nextBtn.addEventListener('click', nextSlide);
+    if (prevBtn) prevBtn.addEventListener('click', prevSlide);
 
     dots.forEach((dot, index) => {
         dot.addEventListener('click', () => {
@@ -33,5 +38,20 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    // Автопрокрутка слайдера
     setInterval(nextSlide, 5000);
+
+    // Плавное закрытие мобильного меню при клике на ссылку
+    const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+    const navbarCollapse = document.querySelector('.navbar-collapse');
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            if (navbarCollapse.classList.contains('show')) {
+                const bsCollapse = new bootstrap.Collapse(navbarCollapse);
+                bsCollapse.hide();
+            }
+        });
+    });
 });
+
