@@ -275,6 +275,7 @@ header {
         padding: 0 20px;
         flex-direction: column;
         gap: 20px;
+        bottom: -170px;
     }
 
     .slider__dots {
