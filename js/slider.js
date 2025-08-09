@@ -102,7 +102,7 @@ class BrandsSlider {
     }
 
     prevSlide() {
-        const prevIndex = this.currentSlide === 0 ? this.slides.length - 1 : this.currentSlide - 1;
+        const prevIndex = (this.currentSlide - 1 + this.slides.length) % this.slides.length;
         this.showSlide(prevIndex);
     }
 
