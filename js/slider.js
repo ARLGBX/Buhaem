@@ -112,5 +112,7 @@ class BrandsSlider {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    new BrandsSlider();
+    if (document.querySelector('.brands-slider__item')) {
+        new BrandsSlider();
+    }
 });
