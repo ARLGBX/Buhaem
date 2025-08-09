@@ -55,7 +55,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 const bsCollapse = new bootstrap.Collapse(navbarCollapse, {
                     toggle: false
                 });
-                bsCollapse.hide();
+                if (typeof bootstrap !== 'undefined') {
+                    const bsCollapse = new bootstrap.Collapse(navbarCollapse, {
+                        toggle: false
+                    });
+                    bsCollapse.hide();
+                }
             }
         });
     });
