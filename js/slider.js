@@ -39,7 +39,11 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Автопрокрутка слайдера
-    setInterval(nextSlide, 5000);
+    let sliderInterval = setInterval(nextSlide, 5000);
+    // Функция для остановки автопрокрутки слайдера
+    function clearSliderInterval() {
+        clearInterval(sliderInterval);
+    }
 
     // Плавное закрытие мобильного меню при клике на ссылку
     const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
