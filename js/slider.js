@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
         showSlide(currentSlide);
     }
 
-    // Обработчики событий
+    // Обработчики событий для главного слайдера
     if (nextBtn) nextBtn.addEventListener('click', nextSlide);
     if (prevBtn) prevBtn.addEventListener('click', prevSlide);
 
@@ -40,32 +40,68 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Автопрокрутка слайдера
     let sliderInterval = setInterval(nextSlide, 5000);
-    // Функция для остановки автопрокрутки слайдера
-    function clearSliderInterval() {
-        clearInterval(sliderInterval);
+
+    // Управление бургер-меню и оверлеем
+    const navbarToggler = document.querySelector('.navbar-toggler');
+    const navbarCollapse = document.querySelector('.navbar-collapse');
+    const navbarOverlay = document.getElementById('navbarOverlay');
+    const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+
+    function showOverlay() {
+        if (navbarOverlay) {
+            navbarOverlay.classList.add('show');
+            document.body.classList.add('menu-open');
+        }
     }
 
-    // Плавное закрытие мобильного меню при клике на ссылку
-    const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
-    const navbarCollapse = document.querySelector('.navbar-collapse');
+    function hideOverlay() {
+        if (navbarOverlay) {
+            navbarOverlay.classList.remove('show');
+            document.body.classList.remove('menu-open');
+        }
+    }
 
-    navLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            if (navbarCollapse.classList.contains('show')) {
+    function closeMenu() {
+        if (navbarCollapse && navbarCollapse.classList.contains('show')) {
+            if (typeof bootstrap !== 'undefined') {
                 const bsCollapse = new bootstrap.Collapse(navbarCollapse, {
                     toggle: false
                 });
-                if (typeof bootstrap !== 'undefined') {
-                    const bsCollapse = new bootstrap.Collapse(navbarCollapse, {
-                        toggle: false
-                    });
-                    bsCollapse.hide();
-                }
+                bsCollapse.hide();
             }
+        }
+    }
+
+    if (navbarCollapse) {
+        navbarCollapse.addEventListener('shown.bs.collapse', function() {
+            showOverlay();
         });
+
+        navbarCollapse.addEventListener('hidden.bs.collapse', function() {
+            hideOverlay();
+        });
+    }
+
+    if (navbarOverlay) {
+        navbarOverlay.addEventListener('click', function() {
+            closeMenu();
+        });
+    }
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            closeMenu();
+        });
+    });
+
+    window.addEventListener('resize', function() {
+        if (window.innerWidth > 991) {
+            hideOverlay();
+        }
     });
 });
 
+// Класс для слайдера брендов
 class BrandsSlider {
     constructor() {
         this.currentSlide = 0;
