@@ -39,7 +39,11 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Автопрокрутка слайдера
-    setInterval(nextSlide, 5000);
+    let sliderInterval = setInterval(nextSlide, 5000);
+    // Функция для остановки автопрокрутки слайдера
+    function clearSliderInterval() {
+        clearInterval(sliderInterval);
+    }
 
     // Плавное закрытие мобильного меню при клике на ссылку
     const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
@@ -51,7 +55,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 const bsCollapse = new bootstrap.Collapse(navbarCollapse, {
                     toggle: false
                 });
-                bsCollapse.hide();
+                if (typeof bootstrap !== 'undefined') {
+                    const bsCollapse = new bootstrap.Collapse(navbarCollapse, {
+                        toggle: false
+                    });
+                    bsCollapse.hide();
+                }
             }
         });
     });
@@ -93,7 +102,7 @@ class BrandsSlider {
     }
 
     prevSlide() {
-        const prevIndex = this.currentSlide === 0 ? this.slides.length - 1 : this.currentSlide - 1;
+        const prevIndex = (this.currentSlide - 1 + this.slides.length) % this.slides.length;
         this.showSlide(prevIndex);
     }
 
@@ -103,5 +112,7 @@ class BrandsSlider {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    new BrandsSlider();
+    if (document.querySelector('.brands-slider__item')) {
+        new BrandsSlider();
+    }
 });

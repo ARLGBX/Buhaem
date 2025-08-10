@@ -112,6 +112,10 @@ header {
     color: var(--accent);
     text-decoration: none;
 }
+.header__logo {
+    width:  60px;
+    height: 60px;
+}
 
 .header__nav-link{
     font-family: var(--font-family),sans-serif;
@@ -764,6 +768,81 @@ header {
     width: 100%;
 }
 
+/*FOOTER*/
+
+footer {
+    background-color:  var(--accent);
+    padding: 3rem 0;
+}
+.footer__content {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    justify-content: center;
+    align-items: center;
+}
+.footer__title {
+    font-family: var(--second-family), sans-serif;
+    font-weight: 900;
+    font-size: 3rem;
+    line-height: 145%;
+    color: var(--bg-color);
+}
+/*.footer__link {*/
+/*    display:  flex;*/
+/*    gap:  1rem;*/
+/*}*/
+/*.footer__link > a {*/
+/*    font-family: var(--font-family), sans-serif;*/
+/*    font-weight: 300;*/
+/*    font-size: 1.5rem;*/
+/*    line-height: 138%;*/
+/*    color: var(--bg-color);*/
+/*}*/
+
+.footer__icon-link {
+    display:  flex;
+    gap:  10rem;
+}
+.footer__icon {
+    color: var(--bg-color);
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none;
+}
+.footer__copyright {
+    font-weight: 900;
+    font-size: 1rem;
+    line-height: 145%;
+    color: var(--bg-color);
+}
+.footer__icon .footer__tooltip {
+    position: absolute;
+    top: 120%;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    background-color: var(--bg-color);
+    color: var(--accent);
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-family: var(--font-family), sans-serif;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.footer__icon:hover .footer__tooltip {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+.footer__SVG {
+    width: 40px;
+    height: 40px;
+}
+
+
 /*OUR CLIENTS*/
 .our-partners {
     padding: 80px 0;
@@ -811,11 +890,11 @@ header {
 }
 
 .brand-logo img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
-    filter: grayscale(100%);
-    transition: filter 0.3s ease;
+    max-width: 400px;
+    max-height: 200px;
+    /*object-fit: contain;*/
+    /*filter: grayscale(100%);*/
+    /*transition: filter 0.3s ease;*/
 }
 
 .brand-logo:hover img {
@@ -1160,6 +1239,7 @@ header {
 }
 
 /* Адаптивность */
+
 @media (max-width: 1199.98px) {
     .our-services__card {
         padding: 2rem 1.5rem;
@@ -1389,7 +1469,18 @@ header {
         font-size: 0.8rem;
     }
 }
-
+@media (max-width: 630.98px) {
+    .footer__tooltip {
+        display: none;
+    }
+    .footer__SVG {
+        width: 30px;
+        height: 30px;
+    }
+    .footer__icon-link {
+        gap: 3rem;
+    }
+}
 @media (max-width: 575.98px) {
     .our-services__title {
         font-size: 1.75rem;
