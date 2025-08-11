@@ -66,7 +66,7 @@ header {
 
 
     .slider {
-        margin-top: 56px;
+        margin-top: 80px;
     }
 
     .navbar-collapse {
@@ -1515,6 +1515,11 @@ body.menu-open {
     .our-services__title {
         font-size: 1.75rem;
     }
+
+    .slider__navigation{
+        bottom: -145px;
+    }
+
     .our-services__description {
         font-size: 1rem;
     }
