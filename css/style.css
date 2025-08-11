@@ -1318,6 +1318,10 @@ body.menu-open {
 }
 
 @media (max-width: 991.98px) {
+    .header__logo {
+        width:  80px;
+        height: 50px;
+    }
     section {
         padding: 6rem 0;
     }
@@ -1602,6 +1606,10 @@ body.menu-open {
 }
 
 @media (max-width: 480px) {
+    .header__logo {
+        width:  60px;
+        height:  40px;
+    }
     .about-us__name {
         font-size: 1.5rem;
     }
