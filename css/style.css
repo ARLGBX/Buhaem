@@ -787,6 +787,7 @@ footer {
 }
 .footer__title {
     font-family: var(--second-family), sans-serif;
+    text-align: center;
     font-weight: 900;
     font-size: 3rem;
     line-height: 145%;
@@ -1607,6 +1608,9 @@ body.menu-open {
     .reviews__btn {
         font-size: 0.9rem;
         padding: 0.6rem 1.5rem;
+    }
+    .footer__title {
+        font-size: 2rem;
     }
 }
 
